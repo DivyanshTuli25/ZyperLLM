@@ -29,8 +29,8 @@ st.set_page_config(page_title="Zyper.AI", page_icon=":robot_face:", layout="wide
 load_dotenv()
 
 # Set API keys
-os.environ['SERPER_API_KEY'] = "5f6abc0af9cd143404253803e14853a3956c0586"
-os.environ['GROQ_API_KEY'] = "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"
+os.environ['SERPER_API_KEY'] = os.getenv("SERPER_API_KEY")
+os.environ['GROQ_API_KEY'] = os.getenv('GROQ_API_KEY')
 
 # Initialize the LLM
 llm = ChatGroq(temperature=0.2, model_name="llama3-70b-8192")
